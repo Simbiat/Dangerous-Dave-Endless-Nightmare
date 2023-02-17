@@ -36,9 +36,8 @@ if (hp == 0) {
 	//Destroy the instance
 	instance_destroy();
 } else {
+	blink_on_hit = true;
+	alarm[0] = 0.25*room_speed;
 	//Push back
 	bulletPushBack();
-	//Flash color
-	image_blend = c_red;
-	alarm[0] = 0.25*room_speed;
 }

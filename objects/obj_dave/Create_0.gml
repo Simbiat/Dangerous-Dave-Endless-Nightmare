@@ -3,7 +3,8 @@ event_inherited();
 obj_game.ammo = obj_game.max_ammo;
 //Set invincibility to prevent excessive deaths
 invincible = true;
-alarm[3] = 5*room_speed;
+blinkShader(sha_gold, 7, 0.25*room_speed);
+alarm[3] = 3*room_speed;
 
 function attemptReloading()
 {
