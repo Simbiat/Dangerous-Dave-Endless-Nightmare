@@ -1,0 +1,1 @@
+sprite_index = ds_map_find_value(ammo_sprites, obj_game.ammo);
