@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "shoot_left_up",
   "bbox_bottom": 31,
-  "bbox_left": 5,
+  "bbox_left": 4,
   "bbox_right": 23,
   "bbox_top": 0,
   "bboxMode": 0,

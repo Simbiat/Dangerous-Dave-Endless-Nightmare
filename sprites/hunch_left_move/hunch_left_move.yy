@@ -4,7 +4,7 @@
   "name": "hunch_left_move",
   "bbox_bottom": 23,
   "bbox_left": 0,
-  "bbox_right": 22,
+  "bbox_right": 23,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 4,

@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "hunch_left_attack",
   "bbox_bottom": 23,
-  "bbox_left": 3,
+  "bbox_left": 2,
   "bbox_right": 37,
   "bbox_top": 1,
   "bboxMode": 0,

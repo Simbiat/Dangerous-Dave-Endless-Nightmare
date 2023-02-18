@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "aim_left_up",
   "bbox_bottom": 31,
-  "bbox_left": 3,
+  "bbox_left": 2,
   "bbox_right": 23,
   "bbox_top": 0,
   "bboxMode": 0,

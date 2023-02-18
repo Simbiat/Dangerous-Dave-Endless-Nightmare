@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_frank_right",
   "bbox_bottom": 79,
-  "bbox_left": 2,
+  "bbox_left": 1,
   "bbox_right": 55,
   "bbox_top": 0,
   "bboxMode": 0,

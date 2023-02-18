@@ -4,7 +4,7 @@
   "name": "aim_right_up",
   "bbox_bottom": 31,
   "bbox_left": 0,
-  "bbox_right": 20,
+  "bbox_right": 21,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 4,

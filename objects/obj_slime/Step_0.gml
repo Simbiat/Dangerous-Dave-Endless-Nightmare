@@ -11,7 +11,7 @@ if hspeed < 0 {
 }
 
 if isAttacking == false {
-	faceDirection(zombie_left_walk, zombie_right_walk);
+	faceDirection(slime_left_move_down, slime_right_move_down);
 }
 
 //Start attack

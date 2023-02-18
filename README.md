@@ -10,5 +10,6 @@ Game is done in [Game Maker](https://gamemaker.io/) using assets from original g
 - Screen-shaking of various intencity
 - Flaming skull is now killable: get your revenge on it
 - Lots of guts
+- Chance of zombie putin, because Слава Украине!
 ## Videos
 [1st teaser](https://www.youtube.com/watch?v=ZBfdTtcaN4E)
