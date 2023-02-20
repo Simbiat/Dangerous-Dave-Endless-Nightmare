@@ -1,6 +1,10 @@
 function spawn(object_index)
 {
 	switch (object_index) {
+		//This is for demo only
+		case putin_walk:
+			instance_create_layer(1805, 812, "Instances", obj_zombie, {putin: true});
+			break;
 	    case obj_dave:
 	        instance_create_layer(107, 839, "Instances", object_index);
 	        break;

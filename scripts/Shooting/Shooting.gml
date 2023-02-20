@@ -113,7 +113,7 @@ function shoot()
 		//Create smoke
 		effect_create_above(ef_smokeup, bulletX, bulletY, 1, c_ltgray);
 		//Create bullet
-		instance_create_layer(bulletX, bulletY, "Instances", obj_bullet, {direction: bulletDirection, image_angle: bulletAngle, image_yscale: bulletYScale, image_xscale: bulletXScale});
+		instance_create_layer(bulletX, bulletY, "Projectiles", obj_bullet, {direction: bulletDirection, image_angle: bulletAngle, image_yscale: bulletYScale, image_xscale: bulletXScale});
 		//Recoil
 		if obj_dave.facing == "right" {
 			screenshake(1, 2, 0.25, true, false, false, false);

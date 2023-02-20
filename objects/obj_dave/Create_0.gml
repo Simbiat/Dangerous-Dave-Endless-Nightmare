@@ -1,10 +1,13 @@
 event_inherited();
 //Set ammo
 obj_game.ammo = obj_game.max_ammo;
-//Set invincibility to prevent excessive deaths
-invincible = true;
-blinkShader(sha_gold, 7, 0.25*room_speed);
-alarm[3] = 3*room_speed;
+if obj_game.deaths > 0 {
+	//Set invincibility to prevent excessive deaths
+	invincible = true;
+	//Gold tone and black&white luminence (close to sepia effect)
+	blinkShader(sha_tone, 7, 0.25*room_speed, [1.0, 0.843, 0.0], [0.299, 0.587, 0.114]);
+	alarm[3] = 3*room_speed;
+}
 
 function attemptReloading()
 {
@@ -31,6 +34,9 @@ function death(death_sprite, from = "left")
 {
 	if !invincible {
 		obj_game.removeLife();
+		repeat(4) {
+			instance_create_layer(obj_dave.x, obj_dave.y, "Instances", obj_guts, {direction: random_range(181, 359)});
+		}
 		if from == "left" {
 			instance_create_layer(room_width/2,room_height/2, "UI", obj_death, {sprite_index: death_sprite});
 		} else {

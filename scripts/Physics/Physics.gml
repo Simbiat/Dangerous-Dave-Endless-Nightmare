@@ -6,6 +6,7 @@ function applyPhysics()
 	closest_right_wall = closestRightWall();
 	is_grounded = isGrounded();
 	if object_get_parent(object_index) == obj_enemy {
+		followPlayer();
 		//Player seems to work fine with just collision event, but enemies get too far without this
 		horizontalCollisions();
 	}
@@ -168,10 +169,10 @@ function horizontalCollisions()
 			x -= distanceLeft;
 			facing = "right";
 		} else {
-			if sign(hspeed) + stride <= distanceLeft {
-				hspeed = stride;
+			if stride <= distanceLeft {
+				hspeed = -stride;
 			} else {
-				hspeed = distanceLeft;
+				hspeed = -distanceLeft;
 			}
 		}
 	} else {
@@ -180,7 +181,7 @@ function horizontalCollisions()
 			x += distanceRight;
 			facing = "left";
 		} else {
-			if sign(hspeed) + stride <= distanceRight {
+			if stride <= distanceRight {
 				hspeed = stride;
 			} else {
 				hspeed = distanceRight;
@@ -205,9 +206,21 @@ function faceDirection(left, right)
 	}
 }
 
-function isInattack_range() {
-	if (facing == "left" && collision_rectangle(bbox_left, bbox_top, bbox_left - attack_range, bbox_bottom, obj_dave, true, true)) or
-		(facing == "right" && collision_rectangle(bbox_right, bbox_top, bbox_right + attack_range, bbox_bottom, obj_dave, true, true))
+function isInAttack_range() {
+	//Clearly not in attack range, if there is no Dave
+	if !instance_exists(obj_dave) {
+		return false;	
+	}
+	//Dave is already dead, we are playing the death "sequence"
+	if obj_dave.isDead or obj_dave.invincible {
+		return false;
+	}
+	//If enemy is over dave, and minimum attack range is 0, consider in range
+	if attack_range_min == 0 && collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_dave, true, true) {
+		return true;
+	}
+	if (facing == "left" && collision_rectangle(x - attack_range_min, bbox_top, x - attack_range_max, bbox_bottom, obj_dave, true, true)) or
+		(facing == "right" && collision_rectangle(x + attack_range_min, bbox_top, x + attack_range_max, bbox_bottom, obj_dave, true, true))
 	{
 		return true;
 	} else {

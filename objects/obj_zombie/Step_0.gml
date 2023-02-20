@@ -6,10 +6,12 @@ if isAttacking == false {
 	} else {
 		faceDirection(zombie_left_walk, zombie_right_walk);
 	}
+} else {
+	hspeed = 0;	
 }
 
 //Start attack
-if isAttacking == false && inattack_range && alarm[1] < 0 {
+if isAttacking == false && !obj_dave.isDead && inattack_range && alarm[1] < 0 {
 	alarm[1] = attack_speed * room_speed;
 	isAttacking = true;
 	if putin {

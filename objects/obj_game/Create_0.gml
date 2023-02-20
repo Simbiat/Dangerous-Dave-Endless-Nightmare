@@ -41,7 +41,7 @@ function addLife(sound = true)
 function removeLife()
 {
 	daves -= 1;
-	instance_destroy(obj_dave);
+	deaths += 1;
 	if instance_exists(obj_life) {
 		var toDestory = instance_furthest(room_width - 36, 58, obj_life);
 		instance_destroy(toDestory);

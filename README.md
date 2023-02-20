@@ -13,3 +13,4 @@ Game is done in [Game Maker](https://gamemaker.io/) using assets from original g
 - Chance of zombie putin, because Слава Украине!
 ## Videos
 [1st teaser](https://www.youtube.com/watch?v=ZBfdTtcaN4E)
+[2nd teaser](https://www.youtube.com/watch?v=UvZI_CL_Hek)
