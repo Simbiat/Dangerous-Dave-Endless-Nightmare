@@ -8,4 +8,4 @@ repeat (3) {
 }
 spawn(obj_dave);
 spawn(obj_zombie);
-//spawn(putin_walk);
+//spawn(obj_hunch);

@@ -1,6 +1,7 @@
 # Dangerous Dave: Endless Nightmare
 Homage to [Dangerous Dave in the Haunted Mansion](https://en.wikipedia.org/wiki/Dangerous_Dave_in_the_Haunted_Mansion) done as part of Arcada's [Game Design and Production](https://www.arcada.fi/en/study-arcada/continuing-education/course-calendar/game-design-and-production) course.  
 Game is done in [Game Maker](https://gamemaker.io/) using assets from original game assests taken from [here](https://www.spriters-resource.com/pc_computer/dangerousdaveinthehauntedmansion/) and [here](https://github.com/gmegidish/dangerous-dave-re/) with minor edits.  
+Playable web version [here](https://www.simbiat.dev/games/dden/).
 ## Features
 - All of the enemies from original game
 - 1 room with multiple waves of those enemies
