@@ -1,15 +1,16 @@
 // Set game width, height and scale
-var width = 1920, height = 1080, scale = min(1, display_get_width() / 1920);
+var width = 1920, height = 1080;
+global.scale = min(1, display_get_height() / height, display_get_width() / width);
 
 // Set window size and surface resolution
-window_set_size(width*scale, height*scale);
-surface_resize(application_surface, width*scale, height*scale);
+window_set_size(width*global.scale, height*global.scale);
+surface_resize(application_surface, width*global.scale, height*global.scale);
 
 // Move window to center of display
-window_set_position(display_get_width()/2-(width*scale)/2, display_get_height()/2-(height*scale)/2);
+window_set_position(display_get_width()/2-(width*global.scale)/2, display_get_height()/2-(height*global.scale)/2);
 
 // Set correct size for GUI layer
-display_set_gui_size(width*scale, height*scale);
+display_set_gui_size(width*global.scale, height*global.scale);
 
 randomise();
 
