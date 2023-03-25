@@ -1,28 +1,3 @@
-// Set game width, height and scale
-var width = 1920, height = 1080;
-global.scale = min(1, display_get_height() / height, display_get_width() / width);
-
-// Set window size and surface resolution
-window_set_size(width*global.scale, height*global.scale);
-surface_resize(application_surface, width*global.scale, height*global.scale);
-
-// Move window to center of display
-window_set_position(display_get_width()/2-(width*global.scale)/2, display_get_height()/2-(height*global.scale)/2);
-
-// Set correct size for GUI layer
-display_set_gui_size(width*global.scale, height*global.scale);
-
-randomise();
-
-//Generate font from sprite
-if !variable_global_exists("score_font") {
-    global.score_font = font_add_sprite_ext(spr_score_font, "0123456789", true, 2);
-}
-
-if !variable_global_exists("gore_list") {
-    global.gore_list = ds_queue_create();
-}
-
 //Function needed to prevent points overflow
 function addPoints(value) {
 	if points < 9223372036854775800 {
