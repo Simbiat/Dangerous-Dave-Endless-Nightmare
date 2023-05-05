@@ -111,10 +111,7 @@ function shoot()
 		//Make sound
 		audio_play_sound(snd_shooting, 1, false);
 		//Create smoke
-		//For browsers, it looks like this does not work at all
-		if os_browser == browser_not_a_browser {
-			effect_create_above(ef_smokeup, bulletX, bulletY, 1, c_ltgray);
-		}
+		effect_create_above(ef_smokeup, bulletX, bulletY, 1, c_ltgray);
 		//Create bullet
 		instance_create_layer(bulletX, bulletY, "Projectiles", obj_bullet, {direction: bulletDirection, image_angle: bulletAngle, image_yscale: bulletYScale, image_xscale: bulletXScale});
 		//Recoil
